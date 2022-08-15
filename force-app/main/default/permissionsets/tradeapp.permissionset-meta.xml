@@ -5,7 +5,7 @@
         <visible>true</visible>
     </applicationVisibilities>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Trade__c.Buy_Amount__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -20,7 +20,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Trade__c.Rate__c</field>
         <readable>true</readable>
     </fieldPermissions>
