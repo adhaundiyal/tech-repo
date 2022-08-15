@@ -1,0 +1,8 @@
+[
+    {
+        "sobject": "Trade__c",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": ["Trades.json"]
+    }
+]
