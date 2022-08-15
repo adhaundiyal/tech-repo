@@ -5,11 +5,11 @@
                 "type": "Trade__c",
                 "referenceId": "TradeRef1"
             },
-            "Sell_Currency__c": "GBP",
-            "Sell_Amount__c": 100,
-            "Rate__c": "1",
-            
-            "Buy_Amount__c" :"100",
+            "Sell_Currency__c": "USD",
+            "Sell_Amount__c": 200,
+            "Rate__c": "1.0325",
+            "Buy_Currency__c" :"EUR",
+            "Buy_Amount__c" :"206.50",
             "Date_booked__c" : "2022-08-13T18:52:38.000+0000"
         },
         {
@@ -17,11 +17,11 @@
                 "type": "Trade__c",
                 "referenceId": "TradeRef2"
             },
-            "Sell_Currency__c": "EUR",
-            "Sell_Amount__c": 100,
-            "Rate__c": "1",
-             
-            "Buy_Amount__c" :"100",
+            "Sell_Currency__c": "GBP",
+            "Sell_Amount__c": 1250.50,
+            "Rate__c": "0.9801",
+            "Buy_Currency__c" :"USD",
+            "Buy_Amount__c" :"1023.89",
             "Date_booked__c" : "2022-08-13T18:52:38.000+0000"
         },
         {
@@ -29,10 +29,11 @@
                 "type": "Trade__c",
                 "referenceId": "TradeRef3"
             },
-            "Sell_Currency__c": "GBP",
-            "Sell_Amount__c": 100,
-            "Rate__c": "1",
-            "Buy_Amount__c" :"100",
+            "Sell_Currency__c": "EUR",
+            "Sell_Amount__c": 23.50,
+            "Rate__c": "0.9621",
+            "Buy_Currency__c" :"GBP",
+            "Buy_Amount__c" :"18.05",
             "Date_booked__c" : "2022-08-13T18:52:38.000+0000"
         },
         {
@@ -41,9 +42,10 @@
                 "referenceId": "TradeRef4"
             },
             "Sell_Currency__c": "GBP",
-            "Sell_Amount__c": 100,
-            "Rate__c": "1",
-            "Buy_Amount__c" :"100",
+            "Sell_Amount__c": 5058.98,
+            "Rate__c": "0.9802",
+            "Buy_Currency__c" :"EUR",
+            "Buy_Amount__c" :"4778.89",
             "Date_booked__c" : "2022-08-13T18:52:38.000+0000"
         },
         {
@@ -51,66 +53,72 @@
                 "type": "Trade__c",
                 "referenceId": "TradeRef5"
             },
-            "Sell_Currency__c": "EUR",
-            "Sell_Amount__c": 100,
-            "Rate__c": "1",  
-            "Buy_Amount__c" :"100",
+            "Sell_Currency__c": "USD",
+            "Sell_Amount__c": 82422.08,
+            "Rate__c": "1.2536",
+            "Buy_Currency__c": "GBP",  
+            "Buy_Amount__c" :96325.03,
             "Date_booked__c" : "2022-08-13T18:52:38.000+0000"
         },
         {
             "attributes": {
                 "type": "Trade__c",
-                "referenceId": "TradeRef6"
-            },
-            "Sell_Currency__c": "GBP",
-            "Sell_Amount__c": 100,
-            "Rate__c": "1",
-            "Buy_Amount__c" :"100",
-            "Date_booked__c" : "2022-08-13T18:52:38.000+0000"
-        },
-        {
-            "attributes": {
-                "type": "Trade__c",
-                "referenceId": "TradeRef7"
+                "referenceId": "TradeRef1"
             },
             "Sell_Currency__c": "USD",
-            "Sell_Amount__c": 100,
-            "Rate__c": "1",
-            "Buy_Amount__c" :"100",
+            "Sell_Amount__c": 200,
+            "Rate__c": "1.0325",
+            "Buy_Currency__c" :"EUR",
+            "Buy_Amount__c" :"206.50",
             "Date_booked__c" : "2022-08-13T18:52:38.000+0000"
         },
         {
             "attributes": {
                 "type": "Trade__c",
-                "referenceId": "TradeRef8"
+                "referenceId": "TradeRef2"
             },
             "Sell_Currency__c": "GBP",
-            "Sell_Amount__c": 100,
-            "Rate__c": "1",
-            "Buy_Amount__c" :"100",
+            "Sell_Amount__c": 1250.50,
+            "Rate__c": 0.9801,
+            "Buy_Currency__c" :"USD",
+            "Buy_Amount__c" :1023.89,
             "Date_booked__c" : "2022-08-13T18:52:38.000+0000"
         },
         {
             "attributes": {
                 "type": "Trade__c",
-                "referenceId": "TradeRef9"
+                "referenceId": "TradeRef3"
             },
-            "Sell_Currency__c": "GBP",
-            "Sell_Amount__c": 100,
-            "Rate__c": "1",
-             
-            "Buy_Amount__c" :"100",
-            "Date_booked__c" : "2022-08-13T18:52:38.000+0000"
+            "Sell_Currency__c": "EUR",
+            "Sell_Amount__c": 23.50,
+            "Rate__c": "0.9621",
+            "Buy_Currency__c" :"GBP",
+            "Buy_Amount__c" :18.05,
+            "Date_booked__c" : "2022-08-12T18:52:38.000+0000"
         },
         {
             "attributes": {
                 "type": "Trade__c",
-                "referenceId": "TradeRef10"
+                "referenceId": "TradeRef4"
             },
             "Sell_Currency__c": "GBP",
-            "Sell_Amount__c": 100,
-            "Rate__c": "1" ,
-            "Date_booked__c" : "2022-08-13T18:52:38.000+0000"
-        }
+            "Sell_Amount__c": 5058.98,
+            "Rate__c": "0.9802",
+            "Buy_Currency__c" :"EUR",
+            "Buy_Amount__c" :4778.89,
+            "Date_booked__c" : "2022-08-10T18:52:38.000+0000"
+        },
+        {
+            "attributes": {
+                "type": "Trade__c",
+                "referenceId": "TradeRef5"
+            },
+            "Sell_Currency__c": "USD",
+            "Sell_Amount__c": 82422.08,
+            "Rate__c": "1.2536",
+            "Buy_Currency__c": "GBP",  
+            "Buy_Amount__c" :96325.03,
+            "Date_booked__c" : "2022-08-09T18:52:38.000+0000"
+        },
     ]
 }

@@ -1,6 +1,6 @@
 {
   "orgName": "TradeDemo",
-  "edition": "Enterprise",
+  "edition": "Developer",
   "features": ["EnableSetPasswordInApi", "AuthorApex"],
   "settings": {
     "lightningExperienceSettings": {
