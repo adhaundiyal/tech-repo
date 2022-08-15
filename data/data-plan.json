@@ -4,5 +4,11 @@
         "saveRefs": true,
         "resolveRefs": false,
         "files": ["Trades.json"]
+    },
+    {
+        "sobject": "CollaborationGroup",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": ["chatterGroups.json"]
     }
 ]
