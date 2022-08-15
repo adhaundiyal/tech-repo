@@ -1,0 +1,176 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <template if:true={loader}>
+        <lightning-spinner alternative-text="Loading..." size="small"></lightning-spinner>
+    </template>
+
+    <div class="slds-box slds-theme_default">
+        <div class="slds-clearfix slds-m-bottom_medium">
+            <div class="slds-float_right ">
+                <lightning-button variant="brand" label="New Trade" title="Open Modal" onclick={customShowModalPopup}></lightning-button>
+            </div>
+        </div>
+        <lightning-card  title="Trades">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                <thead>
+                    <tr class="slds-line-height_reset slds-text-title_caps">
+                        <th  class="slds-is-resizable" scope="col">
+                            <div class="slds-truncate" title="Trade Name">
+                                Trade Name
+                            </div>
+                        </th>
+                        <th  class="slds-is-resizable" scope="col">
+                            <div class="slds-truncate" title="Sell CCY">
+                                Sell CCY
+                            </div>
+                        </th>
+                        <th  class="slds-is-resizable" scope="col">
+                            <div class="slds-truncate" title="Sell Amount">
+                                Sell Amount
+                            </div>
+                        </th>
+                        <th  class="slds-is-resizable" scope="col">
+                            <div class="slds-truncate" title="Buy CCY">
+                                Buy CCY
+                            </div>
+                        </th>
+                        <th class="slds-is-resizable" scope="col">
+                            <div class="slds-truncate" title="Buy Amount">
+                                Buy Amount
+                            </div>
+                        </th>
+                        <th  class="slds-is-resizable" scope="col">
+                            <div class="slds-truncate" title="Rate">
+                                Rate
+                            </div>
+                        </th>
+                        <th class="slds-is-resizable" scope="col">
+                            <div class="slds-truncate" title="Date Booked">
+                                Date Booked
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template if:true={trades}>
+                        <template for:each={trades} for:item="trade">
+                            <tr key={trade.Id}>
+                                <th scope="row" data-label="Name">
+                                    <div class="slds-truncate" title={trade.Name}>{trade.Name}</div>
+                                </th>
+                                <th scope="row" data-label="Sell CCY">
+                                    <div class="slds-truncate" title={trade.Sell_Currency__c}>{trade.Sell_Currency__c}</div>
+                                </th>
+                                <th scope="row" data-label="Sell Amount">
+                                    <div class="slds-truncate" title={trade.Sell_Amount__c}>{trade.Sell_Amount__c}</div>
+                                </th>
+                                <th scope="row" data-label="Buy CCY">
+                                    <div class="slds-truncate" title={trade.Buy_Currency__c}>{trade.Buy_Currency__c}</div>
+                                </th>
+                                <th scope="row" data-label="Buy Amount">
+                                    <div class="slds-truncate" title={trade.Buy_Amount__c}>{trade.Buy_Amount__c}</div>
+                                </th>
+                                <th scope="row" data-label="Rate">
+                                    <div class="slds-truncate" title={trade.Rate__c}>{trade.Rate__c}</div>
+                                </th>
+                                <th scope="row" data-label="Date Booked">
+                                    <div class="slds-truncate" title={trade.Date_booked__c}>{trade.Date_booked__c}</div>
+                                </th>
+                            </tr>
+                        </template>
+                    </template>
+                </tbody>
+            </table>
+            <template if:true={isDisplayNoRecords}>
+                <div class="slds-align_absolute-center">
+                    <br/>
+                    No records found
+                </div>
+            </template>
+            <br/>
+            <div class="slds-align_absolute-center"> 
+                <div class="slds-var-p-right_xx-small">
+                         
+                    <lightning-button label="Prev"
+                    disabled={isPrev} onclick={handlePrev}
+                                        variant="brand"
+                                        icon-name="utility:back"
+                                        name="prev"></lightning-button>  
+                </div>
+                <span class="slds-badge slds-badge_lightest">
+                    {recordStart}-{recordEnd} of {totalRecords} | Page {pageNumber} of {totalPages}
+                </span>
+                <div class="slds-var-p-left_xx-small">
+                    <lightning-button label="Next"
+                    disabled={isNext} onclick={handleNext}
+                                        variant="brand"
+                                        icon-name="utility:forward"
+                                        icon-position="right"
+                                        name="next"></lightning-button>
+                </div>
+            </div>  
+        </lightning-card>
+    </div>
+
+
+    <!-- modal start -->        
+    <template if:true={customFormModal}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            <!-- modal header start -->
+            <header class="slds-modal__header">
+                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={customHideModalPopup}>
+                    <lightning-icon icon-name="utility:close"
+                    alternative-text="close"
+                    variant="inverse"
+                    size="small" ></lightning-icon>
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+                <h2 class="slds-text-heading_medium slds-hyphenate">New Trade</h2>
+            </header>
+            <!-- modal header ends -->
+            <!-- modal body start -->
+            <div class="slds-modal__content slds-p-around_medium">
+        
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_4-of-12 slds-p-horizontal--medium slds-m-bottom_medium">
+                    <lightning-combobox title="Select Currency" 
+                    label="Sell CCY"
+                    value={sellCCY}
+                    placeholder="-Select-"
+                    options={sellCCYOptions}
+                    onchange={handleSellCCYChange}></lightning-combobox>
+                </div>
+                <div class="slds-col slds-size_4-of-12 slds-p-horizontal--medium slds-m-bottom_medium">
+                    <lightning-input label="Rate" value={rate} disabled="true"></lightning-input>
+                </div>
+                <div class="slds-col slds-size_4-of-12 slds-p-horizontal--medium slds-m-bottom_medium">
+                    <lightning-combobox title="Select Currency" id="buyCCY"
+                    label="Buy CCY"
+                    value={buyCCY}
+                    placeholder="-Select-"
+                    options={buyCCYOptions}
+                    onchange={handleBuyCCYChange}></lightning-combobox>
+                </div>
+                <div class="slds-col slds-size_4-of-12 slds-p-horizontal--medium slds-m-bottom_medium">
+                    <lightning-input type="number" label="Sell Amount" value="sellAmount" onchange={handleSellAmountChange}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_4-of-12 slds-p-horizontal--medium slds-m-bottom_medium"></div>
+                <div class="slds-col slds-size_4-of-12 slds-p-horizontal--medium slds-m-bottom_medium">
+                    <lightning-input type="number" label="Buy Amount" value={buyAmount} disabled=""></lightning-input>
+                </div>
+            </div>
+            <!-- modal body ends -->
+            <!-- modal footer start -->
+            <footer class="slds-modal__footer">
+                <button class="slds-button slds-button--destructive slds-float_left" onclick={customHideModalPopup}>Cancel</button>
+                <button class="slds-button slds-button_brand" type="submit" onclick={handleForSave}>Save</button>
+            </footer>
+            <!-- modal footer ends -->
+        </div>
+        </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open">
+        </div>
+    </template>
+</template>

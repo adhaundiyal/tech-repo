@@ -1,0 +1,26 @@
+{
+    "controllerValues": {},
+    "defaultValue": null,
+    "eTag": "8c7c1b7d2a22b6e10fe50bed9f0e9204",
+    "url": "/services/data/v45.0/ui-api/object-info/Trade__c/picklist-values/012000000000000AAA/Sell_Currency__c",
+    "values": [
+        {
+            "attributes": null,
+            "label": "GBP",
+            "validFor": [],
+            "value": "GBP"
+        },
+        {
+            "attributes": null,
+            "label": "EUR",
+            "validFor": [],
+            "value": "EUR"
+        },
+        {
+            "attributes": null,
+            "label": "USD",
+            "validFor": [],
+            "value": "USD"
+        }
+    ]
+}

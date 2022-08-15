@@ -1,0 +1,40 @@
+[
+    {
+        "trades" : [{
+
+            "Id": "a002z000001ykl5AAA",
+            "Name": "TR-0000012",
+            "Sell_Currency__c": "USD",
+            "Sell_Amount__c": 100,
+            "Rate__c": 0.98,
+            "Buy_Currency__c": "GBP",
+            "Buy_Amount__c": 98,
+            "Date_booked__c": "2022-08-14T18:52:38.000+0000"
+
+        },
+        {
+            "Id": "a002z000001yjl5AAA",
+            "Name": "TR-0000011",
+            "Sell_Currency__c": "EUR",
+            "Sell_Amount__c": 100,
+            "Rate__c": 0.98,
+            "Buy_Currency__c": "GBP",
+            "Buy_Amount__c": 98,
+            "Date_booked__c": "2022-08-13T18:52:38.000+0000"
+
+        },
+        {
+            "Id": "a002z000001yml5AAA",
+            "Name": "TR-0000013",
+            "Sell_Currency__c": "USD",
+            "Sell_Amount__c": 100,
+            "Rate__c": 0.98,
+            "Buy_Currency__c": "EUR",
+            "Buy_Amount__c": 98,
+            "Date_booked__c": "2022-08-15T18:52:38.000+0000"
+
+        }
+
+    ],"totalRecords":3,"recordStart":1,"recordEnd":5,"pageSize":5,"pageNumber":1}
+
+    ]
