@@ -4,6 +4,10 @@
         <application>FX_Trade</application>
         <visible>true</visible>
     </applicationVisibilities>
+    <classAccesses>
+        <apexClass>TradeController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
     <fieldPermissions>
         <editable>true</editable>
         <field>Trade__c.Buy_Amount__c</field>
