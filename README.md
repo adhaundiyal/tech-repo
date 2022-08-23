@@ -28,6 +28,10 @@ sfdx force:org:create -s -f config/project-scratch-def.json -a techchallenge
 
 sfdx force:source:push
 
+## Assign permissions to the user(replace the username with the one created for you):
+
+sfdx force:user:permset:assign --permsetname tradeapp  --targetusername test-n3fxrbzo253z@example.com
+
 ## Import sample data:
 
 sfdx force:data:tree:import -p ./data/data-plan.json
